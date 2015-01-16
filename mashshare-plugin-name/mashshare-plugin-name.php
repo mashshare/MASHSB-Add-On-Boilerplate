@@ -55,7 +55,7 @@ if ( ! class_exists( 'MASHSB_Plugin_Name' ) ) :
  * Having this on top of the plugin allows you to make version changes much quicker
  */
 if (!defined('MASHSB_PLUGIN_NAME_VERSION')) {
-    define('MASHPV_VERSION', '1.0.0');
+    define('MASHSB_PLUGIN_NAME_VERSION', '1.0.0');
 }
 
 /**
