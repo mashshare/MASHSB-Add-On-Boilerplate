@@ -104,8 +104,8 @@ function plugin_name_load_admin_scripts( $hook ) {
 	}
     }
 
-	$js_dir  = MASHSB_PLUGIN_NAME_VERSION_URL . 'assets/js/';
-	$css_dir = MASHSB_PLUGIN_NAME_VERSION_URL . 'assets/css/';
+	$js_dir  = MASHSB_PLUGIN_NAME_URL . 'assets/js/';
+	$css_dir = MASHSB_PLUGIN_NAME_URL . 'assets/css/';
 
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
