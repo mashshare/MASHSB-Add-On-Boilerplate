@@ -12,7 +12,7 @@
  *
  * @package MASHSB\Plugin_Name
  * @category Add-On
- * @author @todo
+ *
  * IMPORTANT! Ensure that you make the following adjustments
  * before releasing your extension:
  *
@@ -278,7 +278,7 @@ function MASHSB_Plugin_Name_load() {
     }
 }
 
-/**
+/** 
  * The activation hook is called outside of the singleton because WordPress doesn't
  * register the call from within the class hence, needs to be called outside and the
  * function also needs to be static.
