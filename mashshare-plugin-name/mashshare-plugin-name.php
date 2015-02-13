@@ -12,7 +12,7 @@
  *
  * @package MASHSB\Plugin_Name
  * @category Add-On
- *
+ * 
  * IMPORTANT! Ensure that you make the following adjustments
  * before releasing your extension:
  *
