@@ -45,8 +45,9 @@ function plugin_name_load_scripts($hook) {
 
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-
-	wp_enqueue_script( 'plugin-name', $js_dir . $js_title . $suffix . '.js', array( 'jquery' ), MASHSB_PLUGIN_NAME_VERSION ); 
+        // Check if js should be loaded in footer
+        isset($mashsb_options['load_scripts_footer']) ? $in_footer = true : $in_footer = false;
+	wp_enqueue_script( 'plugin-name', $js_dir . $js_title . $suffix . '.js', array( 'jquery' ), MASHSB_PLUGIN_NAME_VERSION, $in_footer ); 
         
         /* Use this when you need CDATA Strings in your HTML code 
          * to access them via JS
@@ -109,7 +110,9 @@ function plugin_name_load_admin_scripts( $hook ) {
 
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( 'plugin-name-admin', $js_dir . 'plugin-name' . $suffix . '.js', array( 'jquery' ), MASHSB_PLUGIN_NAME_VERSION, false );
+        // Check if js should be loaded in footer
+        isset($mashsb_options['load_scripts_footer']) ? $in_footer = true : $in_footer = false;
+	wp_enqueue_script( 'plugin-name-admin', $js_dir . 'plugin-name' . $suffix . '.js', array( 'jquery' ), MASHSB_PLUGIN_NAME_VERSION, $in_footer );
 }
 add_action( 'admin_enqueue_scripts', 'plugin_name_load_admin_scripts', 100 );
 
